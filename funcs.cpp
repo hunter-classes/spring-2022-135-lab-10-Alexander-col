@@ -13,9 +13,10 @@ int minutesSinceMidnight(Time time)
     return answer;
 }
 
-// int minutesUntil(Time time)
-// {
-//     int total_mins = 1440
-//     int min
-// }
+
+int minutesUntil(Time earlier, Time later)
+{
+    int answer = ((earlier.h * 60) + earlier.m) - ((later.h * 60) + later.m);
+    return answer;
+}
 
