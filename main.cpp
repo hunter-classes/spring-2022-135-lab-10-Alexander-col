@@ -5,6 +5,7 @@ int main()
 {
     Time t = { 17, 45 }; // intializine a time with the name of "t"
     Time u = { 22, 3 };  // making a class of hour and mintues with name of "u"
+    Time c = { 8, 10 }; // made another class that came from website
 
     //Here is to check if Task A pt.1 is working
     std::cout << minutesSinceMidnight(t) << std::endl;
@@ -13,7 +14,8 @@ int main()
     std::cout << minutesUntil(u,t) << std::endl;
 
     //Here is to check if Task B is working
-    // std::cout << addMinutes(t, 16) << std::endl;
-    std::cout << t.h << std::endl;
+    c = addMinutes(c, 75);
+    std::cout << c.h << ":" << c.m << std::endl;
+
     return 0;
 }

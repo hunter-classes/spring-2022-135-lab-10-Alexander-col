@@ -23,11 +23,12 @@ int minutesUntil(Time earlier, Time later)
 Time addMinutes(Time time0, int min)
 {
     time0.m += min;
+
     if (time0.m >= 60)
     {
         time0.h = time0.h + (time0.m/60);
         time0.m = (time0.m%60);
-        return time0;
+        return {time0.h, time0.m};
     }
 
     return {time0.h, time0.m};
