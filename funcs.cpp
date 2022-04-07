@@ -1,5 +1,8 @@
 #include <iostream>
 #include "funcs.h"
+#include "time.h"
+#include "movie.h"
+#include "timeslot.h"
 
 void printTime(Time time) 
 {
@@ -32,4 +35,29 @@ Time addMinutes(Time time0, int min)
     }
 
     return {time0.h, time0.m};
+}
+
+// Back to the Future COMEDY (116 min) [starts at 9:15, ends by 11:11]
+
+// void printTimeSlot(TimeSlot ts)
+// {
+//     std::cout << ts.movie.title << ts.movie.
+// }
+
+void printMovie(Movie mv){
+    std::string g;
+    switch (mv.genre) {
+        case ACTION   : g = "ACTION"; break;
+        case COMEDY   : g = "COMEDY"; break;
+        case DRAMA    : g = "DRAMA";  break;
+        case ROMANCE  : g = "ROMANCE"; break;
+        case THRILLER : g = "THRILLER"; break;
+    }
+    std::cout << mv.title << " " << g << " (" << mv.duration << " min)";
+}
+// Back to the Future COMEDY (116 min) [starts at 9:15, ends by 11:11]
+void printTimeSlot(TimeSlot ts)
+{
+    std::cout << ts.movie.title << " (" <<ts.movie.duration << " min)" << "[starts at ";
+    printTime(ts.startTime);
 }
