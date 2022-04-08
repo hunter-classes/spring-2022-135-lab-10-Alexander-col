@@ -16,16 +16,21 @@ int main()
 
 
     // Here is to check if Task A pt.1 is working
+    std::cout << "---------------------Task A ---------------------" << std::endl;
     std::cout << minutesSinceMidnight(t) << std::endl;
 
     // Here is to check if Task A pt.2 is working
     std::cout << minutesUntil(u,t) << std::endl;
 
     // Here is to check if Task B is working
+    std::cout << "---------------------Task B ---------------------" << std::endl;
+
     c = addMinutes(c, 75);
     std::cout << c.h << ":" << c.m << std::endl;
     
     // Here is to check if Task C is working
+    std::cout << "---------------------Task C ---------------------" << std::endl;
+
     TimeSlot morning = {movie1, {9, 15}};  
     TimeSlot daytime = {movie2, {12, 15}}; 
     TimeSlot evening = {movie2, {16, 45}}; 
@@ -35,12 +40,12 @@ int main()
     
     printMovie(movie1);
     std::cout << std::endl;
-    printTimeSlot(morning);
-    printTimeSlot(daytime);
-    printTimeSlot(evening);
-    printTimeSlot(later);
-    printTimeSlot(much_later);
-    printTimeSlot(final);
+    std::cout << getTimeSlot(morning) << std::endl;
+    std::cout << getTimeSlot(daytime) << std::endl;
+    std::cout << getTimeSlot(evening) << std::endl;
+    std::cout << getTimeSlot(later) << std::endl;
+    std::cout << getTimeSlot(much_later) << std::endl;
+    std::cout << getTimeSlot(final) << std::endl;
 
 
     return 0;

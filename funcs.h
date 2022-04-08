@@ -2,6 +2,7 @@
 #include "time.h"
 #include "movie.h"
 #include "timeslot.h"
+
 // Below are the function that were povided by the lab website
 void printTime(Time time);
 void printMovie(Movie mv);
@@ -13,6 +14,6 @@ int minutesUntil(Time earlier, Time later);
 Time addMinutes(Time time0, int min);
 
 // Here is the function of Task C 
-void printTimeSlot(TimeSlot ts);
+std::string getTimeSlot(TimeSlot ts);
 
 // void printTimeSlot(TimeSlot ts);
