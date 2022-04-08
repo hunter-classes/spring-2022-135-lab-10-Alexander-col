@@ -68,7 +68,7 @@ void printTimeSlot(TimeSlot ts)
     }
     std::cout << ts.movie.title << " " <<g << " (" <<ts.movie.duration << " min)" << " [starts at ";
     printTime(ts.startTime);
-    std::cout << ", end by ";
+    std::cout << ", ends by ";
     ts.startTime = addMinutes(ts.startTime, ts.movie.duration);
     printTime(ts.startTime);
     std::cout << "]" << std::endl;
