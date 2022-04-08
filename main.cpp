@@ -10,6 +10,8 @@ int main()
     Time c = { 8, 10 }; // made another class that came from website
     Movie movie1 = {"Back to the Future", COMEDY, 116};
     Movie movie2 = {"Black Panther", ACTION, 134};
+    Movie movie3 = {"Scott Pilgrim vs. the World", ACTION, 112};
+    Movie movie4 = {"Jujutsu Kaisen 0: The Movie"}
 
 
     // Here is to check if Task A pt.1 is working

@@ -58,6 +58,18 @@ void printMovie(Movie mv){
 // Back to the Future COMEDY (116 min) [starts at 9:15, ends by 11:11]
 void printTimeSlot(TimeSlot ts)
 {
-    std::cout << ts.movie.title << " (" <<ts.movie.duration << " min)" << "[starts at ";
+        std::string g;
+    switch (ts.movie.genre) {
+        case ACTION   : g = "ACTION"; break;
+        case COMEDY   : g = "COMEDY"; break;
+        case DRAMA    : g = "DRAMA";  break;
+        case ROMANCE  : g = "ROMANCE"; break;
+        case THRILLER : g = "THRILLER"; break;
+    }
+    std::cout << ts.movie.title << " " <<g << " (" <<ts.movie.duration << " min)" << " [starts at ";
     printTime(ts.startTime);
+    std::cout << ", end by ";
+    ts.startTime = addMinutes(ts.startTime, ts.movie.duration);
+    printTime(ts.startTime);
+    std::cout << "]" << std::endl;
 }
