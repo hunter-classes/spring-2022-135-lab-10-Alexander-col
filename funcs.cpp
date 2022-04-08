@@ -85,7 +85,15 @@ TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie)
     next.startTime.m = next.startTime.m % 60;
 
     return next;
+}
 
+bool timeOverlap(TimeSlot ts1, TimeSlot ts2) // Could run a for loop to hit every single mintue of the day and see if it matches return 
+{
+    ts1.startTime.m += ts1.startTime.h*60;
+    ts1.startTime.m += ts1.startTime.h*60;
+    int ts1_end = ts1.startTime.m + ts1.movie.duration;
+    int ts2_end = ts2.startTime.m + ts2.movie.duration;
+    for()
 
 
 }

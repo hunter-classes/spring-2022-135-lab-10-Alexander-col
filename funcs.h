@@ -20,3 +20,6 @@ std::string getTimeSlot(TimeSlot ts);
 
 // Here is the func of Task D
 TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie);
+
+// Here is the func of Task E
+bool timeOverlap(TimeSlot ts1, TimeSlot ts2);

@@ -16,20 +16,20 @@ int main()
 
 
     // Here is to check if Task A pt.1 is working
-    std::cout << "---------------------Task A ---------------------" << std::endl;
+    std::cout << "\n---------------------Task A ---------------------" << std::endl;
     std::cout << minutesSinceMidnight(t) << std::endl;
 
     // Here is to check if Task A pt.2 is working
     std::cout << minutesUntil(u,t) << std::endl;
 
     // Here is to check if Task B is working
-    std::cout << "---------------------Task B ---------------------" << std::endl;
+    std::cout << "\n---------------------Task B ---------------------" << std::endl;
 
     c = addMinutes(c, 75);
     std::cout << c.h << ":" << c.m << std::endl;
     
     // Here is to check if Task C is working
-    std::cout << "---------------------Task C ---------------------" << std::endl;
+    std::cout << "\n---------------------Task C ---------------------" << std::endl;
 
     TimeSlot morning = {movie1, {9, 15}};  
     TimeSlot daytime = {movie2, {12, 15}}; 
@@ -38,7 +38,6 @@ int main()
     TimeSlot much_later = {movie4, {12, 15}}; 
     TimeSlot final = {movie5, {16, 45}}; 
     
-    printMovie(movie1);
     std::cout << std::endl;
     std::cout << getTimeSlot(morning) << std::endl;
     std::cout << getTimeSlot(daytime) << std::endl;
@@ -47,7 +46,7 @@ int main()
     std::cout << getTimeSlot(much_later) << std::endl;
     std::cout << getTimeSlot(final) << std::endl;
 
-    std::cout << "---------------------Task D ---------------------" << std::endl;
+    std::cout << "\n---------------------Task D ---------------------" << std::endl;
 
     TimeSlot xr = scheduleAfter(final, movie3);
     std::cout << getTimeSlot(xr) << std::endl;
