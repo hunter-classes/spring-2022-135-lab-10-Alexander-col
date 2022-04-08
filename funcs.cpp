@@ -19,7 +19,7 @@ int minutesSinceMidnight(Time time)
 
 int minutesUntil(Time earlier, Time later)
 {
-    int answer = ((earlier.h * 60) + earlier.m) - ((later.h * 60) + later.m);
+    int answer = ((later.h * 60) + later.m) - ((earlier.h * 60) + earlier.m) ;
     return answer;
 }
 
