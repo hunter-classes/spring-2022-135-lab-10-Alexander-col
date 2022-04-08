@@ -47,6 +47,12 @@ int main()
     std::cout << getTimeSlot(much_later) << std::endl;
     std::cout << getTimeSlot(final) << std::endl;
 
+    std::cout << "---------------------Task D ---------------------" << std::endl;
+
+    TimeSlot xr = scheduleAfter(final, movie3);
+    std::cout << getTimeSlot(xr) << std::endl;
+
+
 
     return 0;
 }

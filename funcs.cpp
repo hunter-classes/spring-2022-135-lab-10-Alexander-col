@@ -76,3 +76,16 @@ std::string getTimeSlot(TimeSlot ts)
 
     return output;
 }
+// Here is the the bottoom for D
+TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie)
+{
+    TimeSlot next = {nextMovie, {ts.startTime.h, ts.startTime.m}};
+    next.startTime.m = (ts.movie.duration + next.startTime.m);
+    next.startTime.h = ((ts.startTime.h) + (next.startTime.m/60));
+    next.startTime.m = next.startTime.m % 60;
+
+    return next;
+
+
+
+}

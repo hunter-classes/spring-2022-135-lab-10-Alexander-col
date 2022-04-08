@@ -17,3 +17,6 @@ Time addMinutes(Time time0, int min);
 std::string getTimeSlot(TimeSlot ts);
 
 // void printTimeSlot(TimeSlot ts);
+
+// Here is the func of Task D
+TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie);

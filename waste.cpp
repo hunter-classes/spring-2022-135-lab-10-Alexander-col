@@ -7,7 +7,7 @@ int main()
 
     std::string b = std::to_string(a);
 
-    std::cout << "Fetty Wap once said" + b << std::endl;
+    std::cout << "Fetty Wap once said" + std::to_string(a) << std::endl;
 
 
 
