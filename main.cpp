@@ -51,6 +51,9 @@ int main()
     TimeSlot xr = scheduleAfter(final, movie3);
     std::cout << getTimeSlot(xr) << std::endl;
 
+    std::cout << "\n---------------------Task E ---------------------" << std::endl;
+    
+    std::cout << timeOverlap(morning, morning) << std::endl;
 
 
     return 0;
