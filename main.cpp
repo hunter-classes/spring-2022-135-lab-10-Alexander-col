@@ -54,6 +54,8 @@ int main()
     std::cout << "\n---------------------Task E ---------------------" << std::endl;
     
     std::cout << timeOverlap(morning, morning) << std::endl;
+    std::cout << timeOverlap(morning, final) << std::endl;
+   
 
 
     return 0;

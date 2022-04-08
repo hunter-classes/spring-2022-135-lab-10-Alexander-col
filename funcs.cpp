@@ -86,6 +86,7 @@ TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie)
 
     return next;
 }
+
 int is_smaller(int a, int b)
 {
     if (a > b)
@@ -94,13 +95,14 @@ int is_smaller(int a, int b)
     }
     else if (a < b)
     {
-        return b;
+        return a;
     }
     else
     {
         return a;
     }
 }
+
 int is_bigger(int a, int b)
 {
     if (a > b)
@@ -118,16 +120,19 @@ int is_bigger(int a, int b)
 }
 bool timeOverlap(TimeSlot ts1, TimeSlot ts2) // Could run a for loop to hit every single mintue of the day and see if it matches return 
 {
-    int ts1_start = ts1.startTime.m + (ts1.startTime.h * 60);
-    int ts2_start = ts2.startTime.m + (ts1.startTime.h * 60);
-    int ts1_end = ts1.startTime.m + ts1.movie.duration;
-    int ts2_end = ts2.startTime.m + ts2.movie.duration;
-    for (int i = (is_smaller(ts1_start,ts2_start)); i != (is_bigger(ts1_end,ts2_end)); i++)
+    int ts1_start = minutesSinceMidnight(ts1.startTime);
+    int ts1_end = ts1_start + ts1.movie.duration;
+
+    int ts2_start = minutesSinceMidnight(ts2.startTime);
+    int ts2_end = ts2_start + ts2.movie.duration;
+
+    int loop_start = is_smaller(ts1_start, ts2_start);
+    int loop_end = is_bigger(ts1_end, ts2_end);
+
+    for (int i = loop_start; i != loop_end; i++)
     {
-        if ((i > ts1_start && i < ts2_end) && ((i > ts2_start && i < ts2_end)))
-        {
-            return true;
-        }
+        if ((i > ts1_start && i < ts1_end) && (i > ts2_start && i < ts2_end))
+        return true; 
     }
     return false;
 
